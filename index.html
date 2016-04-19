@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" media="handheld, only screen and (max-device-width: 481px)" href="css/phone.css">
+        
+		<title>Assignment 1</title>
+       
+	</head>
+	
+	<body>
+		<!-- Gallery section -->
+		<div class="main_section" id="gallery">
+			<div class="sideBySide" id="oldFarm">
+			<h1 class = "title">Old Farm Property For Rent</h1>
+			<h3>Walberswick, Suffolk</h3>
+			</div>
+			
+			<div class="sideBySide" id="price">
+				<h1>£850</h1>
+				<p>For 7 Days</p>
+			</div>
+			
+			<hr>
+			<div id="imageContent" >
+						
+						
+				<!-- Big Main Picture -->					
+				<div id="viewMode">
+					<span class="center"></span><img id="focusimage" alt="Current Image" src="images/image1.jpg"/>
+				</div>
+						
+				<!-- Rows of Selectable images -->
+				<div id="imageBox" class="center">
+					<img src="images/thumb1.jpg" alt="House Side" onclick="changeimage('images/image1.jpg');" />
+					<img src="images/thumb2.jpg" alt="Master Bedroom" onclick="changeimage('images/image2.jpg');" />
+					<img src="images/thumb3.jpg" alt="House Well" onclick="changeimage('images/image3.jpg');" />
+					<img src="images/thumb4.jpg" alt="House Front" onclick="changeimage('images/image4.jpg');" />
+					<img src="images/thumb5.jpg" alt="Dining Room" onclick="changeimage('images/image5.jpg');" />
+					<img src="images/thumb6.jpg" alt="Kitchen" onclick="changeimage('images/image6.jpg');" />
+					<img src="images/thumb7.jpg" alt="Yard" onclick="changeimage('images/image7.jpg');" />
+					<img src="images/thumb8.jpg" alt="Bathroom" onclick="changeimage('images/image8.jpg');" />
+					<img src="images/thumb9.jpg" alt="Bedroom" onclick="changeimage('images/image9.jpg');" />
+					<img src="images/thumb10.jpg" alt="House" onclick="changeimage('images/image10.jpg');"/>
+				</div>
+			</div>
+		</div>
+
+		<nav>
+			<div id = "buttonRow">
+				<div id="buttons">
+					<button class="navbutton" onclick="displayContent('main')">Description</button>
+					<button class="navbutton" onclick="displayContent('map');initialize();">Map</button>
+					<button class="navbutton" onclick="displayContent('comments')">Comments</button>
+				</div>
+			</div>
+		</nav>
+		
+		<!--Map section	-->
+		<div class="content_section" id="map">
+			<h1 class = "title">Map</h1>
+			<hr>
+			<!-- Google map -->
+			<div id="map_canvas" class="sideBySide">
+			</div>
+			
+			<div id="local_info" class="sideBySide">
+				
+				<!-- Directions section	-->
+				<h3>Directions</h3>
+				<input type="text" id="start" placeholder="Enter a Location" />				
+				<button id="end" value="52.313365, 1.659623" onclick="calcRoute();">Search</button>
+				<button id="resetMap" value="52.313365, 1.659623" onclick="initialize()">Reset Map</button>
+				
+				<h3>Points of interest</h3>
+				<ul>
+					<li>Church of Saint Andrew Walberswick</li>
+					<li>Dunwich Museum</li>
+					<li>Suffolk Coast National Nature Reserve</li>
+					<li>Alfred Corry Lifeboat Museum</li>
+					<li>Southwold Lighthouse</li>
+				</ul>
+				
+				<h3>Restaurants / Pubs</h3>
+				<ul>
+					<li>The Anchor pub - The Street, Walberswick IP18 6UA</li>
+					<li>The Bell Inn - Ferry Rd, sufflok IP18 6TN</li>
+					<li>The Harbour Inn - Black Shore, Southwold IP18 6TA</li>
+					<li>Mrs T's Fish And Chips - 1 Blackshore Cottage, Southwold IP18 6TA</li>
+				</ul>
+				
+			</div>
+		</div>
+				
+		
+		<!-- Main text -->
+		<div class="content_section" id="main">
+			<h1 class = "title">Description</h1>
+			<hr>
+			<p>The village of Walberswick is one of the prettiest on the coast, with the river running through the marshes, its' windswept sand dunes and characterful beach huts. The village itself offers a post office and well-stocked local shop, two pubs serving good food, and a selection of gift shops and cafes surround the village green. There are many walking and cycling paths through the village and its environs, taking you through the nature reserves to Dunwich, or along the River Blyth, crossing the Bailey Bridge at Blackshore to Southwold harbour.</p> 
+			
+			<p>A holiday at Old Farm, offers a combination of a truly exceptional house with a delightful seaside holiday on this beautiful stretch of the Suffolk Heritage Coast. Originally the property was the principal farm in the village and, in the late 19th century and the early part of the 20th century, Old Farm and its gardens provided a social hub for the Walberswick art colony. Visiting artists included Philip Wilson Steer, Charles Rennie MacIntosh and Arthur Rackham.</p>
+
+			<p>This fine house offers spacious and attractive accommodation in a cottage style, with comfortably low ceilings, exposed beams, inglenook fireplaces, and sea views from some of the upstairs windows. The sitting room is spacious with comfortable seating to accommodate all. There is an multi-fuel stove for chillier winter evenings and the sitting room also opens out on to the beautiful south-facing garden and veranda area, perfect for summertime entertaining. The kitchen is well equipped with a breakfast table and chairs, while a separate dining room has a large antique table for more formal dining occasions, as well as an open inglenook fireplace with a wood-burner.</p>
+
+			<p>Upstairs are four bedrooms: a double with a day bed overlooking the garden with sea views, a small bunk-bedded room for children only, a twin bedroom with polished wooden floors and the Master Bedroom with ensuite shower room. This room also has a lovely bath in the bedroom and a restored antique brass bed. An additional family bathroom is also on this floor.</p>
+
+			<p>The large and pretty garden is a delightful space with many sheltered spots and different seating areas.</p>
+
+			<h3>Sitting Area</h3>
+			<ul>
+				<li>3 seater sofa, 2 armchairs, other occasional chairs.</li>
+				<li>Multi-fuel stove.</li>
+			</ul>
+
+			<h3>Dining room</h3>
+			<ul>
+				<li>Dining table and chairs for 8, woodburner.</li>
+			</ul>
+			
+			<h3>Kitchen</h3>
+			<ul>
+				<li>Breakfast table and chairs for 8.</li>
+				<li>Electric oven and hob, oil-fired Rayburn cooker, microwave, dishwasher, fridge/freezer, toaster.</li>
+				<li>Washing machine, tumble dryer.</li>
+				<li>Iron and ironing board.</li>
+			</ul>
+				
+			<h3>Bathroom</h3>
+			<ul>
+				<li>Downstairs: shower room with shower cubicle, WC and hand basin.</li>
+				<li>Ensuite shower room, WC and hand basin (plus bath in bedroom).</li>
+				<li>Family bathroom: bath, WC and hand basin.</li>
+			</ul>
+				
+			<h3>Bedrooms</h3>
+			<ul>
+				<li>2 doubles, 1 with day bed (for children only).</li>
+				<li>1 bunk bedded room (children only).</li>
+				<li>1 twin bedroom.</li>
+			</ul>
+				
+			<h3>Outside</h3>
+			<ul>
+				<li>Enclosed garden.</li>
+				<li>Garden furniture.</li>
+				<li>Storage for bikes.</li>
+				<li>Off road parking for 2 cars.</li>
+			</ul>
+			
+			<p>This property sleeps 6 adults and 2/3 children as the bunk beds are not adult sized. Pets welcome, but one small, well behaved dog only. Please scoop the poop.</p>
+
+			<p>The property has oil fired central heating and wood-burning stove.</p>
+
+			<p>Bed linen is provided, but please bring own towels and beach towels. Travel cot is also provided.</p>
+
+			<p>Please note: Internet connection in Walberswick can be very slow.</p>
+		</div>
+		
+		<!-- Comments section -->
+		<div class="content_section" id="comments">
+			
+			<div id="dtext">
+				<h1>Submit A Comment</h1>
+				<hr>
+				<label>Enter your name:</label><br />
+				<input id="namebox" type="text" maxlength="32" size="20" placeholder="Name"/><br />
+				<label>Enter your Comment:</label><br />
+				<textarea id="txt1" rows="10" cols="50" placeholder="Enter comment"></textarea><br />
+				<button class="navbutton" onclick="saveComment()">Submit Comment</button>
+				<button class="navbutton" onclick="clearComment()">Clear Comment</button>
+			</div>
+			
+			<h1 class = "title">Comments</h1>
+			<hr>
+			
+			<div id="cmtlist">
+            </div>
+			
+		</div>
+		
+		<!--Contact section	-->
+		<div id="contact">
+			<h1>Contact Details</h1>
+			<hr>
+			<p>If interested in the property, please contact:</p>
+			<h3>Dianna Vu</h3> 
+			<p>Mobile: 07909052006</p>
+			<p>Email: Dianna.Vu@uea.ac.uk</p>
+			<h3>Daniel Banks</h3> 
+			<p>Email: Daniel.Banks@uea.ac.uk</p>
+		</div>
+		
+		<!--Footer section	-->
+		<footer>
+			<p>Site By - Dianna Vu and Daniel Banks</p>
+		</footer>
+		
+		<!--Scripts	-->
+		<script src="https://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+		<script src="js/javascript.js" type="text/javascript"></script>
+		<script src="js/comments.js" type="text/javascript"></script>
+		<script src="js/map.js" type="text/javascript"></script>
+	</body>
+	
+	
+</html>
